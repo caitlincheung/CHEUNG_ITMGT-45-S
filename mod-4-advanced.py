@@ -41,15 +41,29 @@ def relationship_status(from_member, to_member, social_graph):
     '''
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-     if to_member in social_graph[from_member]['following'] and from_member in social_graph[to_member]['following']:
-        answer='friends'
-    elif to_member in social_graph[from_member]['following']:
-        answer='follower'
-    elif from_member in social_graph[to_member]['following']:
-        answer='followed by'
+    def relationship_status(from_member, to_member, social_graph):
+    if to_member in social_graph.get(from_member, {}).get("following", []):
+        if from_member in social_graph.get(to_member, {}).get("following", []):
+            return "friends"
+        else:
+            return "follower"
+    elif from_member in social_graph.get(to_member, {}).get("following", []):
+        return "followed by"
     else:
-        answer='no relationship'
-    return answer
+        return "no relationship"
+
+# Sample data for Relationship Status
+social_graph = {
+    "@bongolpoc": {"first_name": "Joselito", "last_name": "Olpoc", "following": []},
+    "@joaquin": {"first_name": "Joaquin", "last_name": "Gonzales", "following": ["@chums", "@jobenilagan"]},
+    "@chums": {"first_name": "Matthew", "last_name": "Uy", "following": ["@bongolpoc", "@miketan", "@rudyang", "@joeilagan"]},
+    "@jobenilagan": {"first_name": "Joben", "last_name": "Ilagan", "following": ["@eeebeee", "@joeilagan", "@chums", "@joaquin"]},
+    "@joeilagan": {"first_name": "Joe", "last_name": "Ilagan", "following": ["@eeebeee", "@jobenilagan", "@chums"]},
+    "@eeebeee": {"first_name": "Elizabeth", "last_name": "Ilagan", "following": ["@jobenilagan", "@joeilagan"]},
+}
+
+# Test the function with sample data
+print(relationship_status("@joaquin", "@chums", social_graph))  # Should print "follower"
 
 
 def tic_tac_toe(board):
