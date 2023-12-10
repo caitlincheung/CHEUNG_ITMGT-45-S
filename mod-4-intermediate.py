@@ -74,8 +74,7 @@ def caesar_cipher(message, shift):
             shiftedstring=shiftedstring+chr(ord(i)+shift)
         elif ord(i)+shift<=90:
             shiftedstring=shiftedstring+chr(ord(i)+shift)
-
-return shiftedstring
+            return shiftedstring
 
 def shift_by_letter(letter, letter_shift):
     '''Shift By Letter. 
