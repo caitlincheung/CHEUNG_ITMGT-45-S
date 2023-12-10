@@ -136,6 +136,6 @@ def body_mass_index(weight, height):
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer. 
     weight_kg = weight * 0.453592
-    height_m = (height[0] * 12 + height[1]) * 0.0254
+    height_m = (height[0] * 0.3048 + height[1]) * 0.0254
     bmi = weight_kg / (height_m ** 2)
     return bmi
