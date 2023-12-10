@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,11 +11,71 @@
             background-color: #654321; /* brownish-red background color */
             color: #ffffff; /* white text color */
         }
+
+        header {
+            background-color: #5B7691; /* Updated header color */
+            padding: 10px;
+            text-align: center; /* Centering the logo and title */
+        }
+
+        header img {
+            max-width: 80px;
+            height: auto;
+        }
+
+        header h1 {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centering the navigation links */
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ffffff;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .product-image {
+            max-width: 100px; /* Adjust the size of the product images */
+            height: auto;
+        }
+
+        footer {
+            background-color: #5B7691; /* Updated footer color */
+            padding: 10px;
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
     <header>
-        <img src="path_to_logo_image" alt="Digital Espresso Logo">
+        <img src="https://cbtl-images.s3.us-west-1.amazonaws.com/Production/Drupal/s3fs-public/cta-block/icon/shop_coffee_icon_0.png" alt="Digital Espresso Logo">
+        <h1>Digital Espresso</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -24,9 +85,42 @@
             </ul>
         </nav>
     </header>
-    <!-- Page content goes here -->
+
+    <!-- Content Area -->
+    <div class="content">
+        <h1>Our Products</h1>
+        <!-- Product Table -->
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+            <!-- Sample Product 1 -->
+            <tr>
+                <td><a href="product1.html">Premium Blend</a></td>
+                <td>Smooth and rich blend with notes of chocolate and caramel.</td>
+                <td><img class="product-image" src="https://assets-global.website-files.com/642d682a6e4ca0d303c81fdf/65143e00e39e4a5014523bdc_ezgif.com-resize%20-%202023-09-27T173641.638.webp" alt="Premium Blend"></td>
+            </tr>
+            <!-- Sample Product 2 -->
+            <tr>
+                <td><a href="product2.html">Single Origin Ethiopia</a></td>
+                <td>Distinctive Ethiopian coffee with floral and fruity undertones.</td>
+                <td><img class="product-image" src="https://unblast.com/wp-content/uploads/2018/08/Coffee-Package-Mockup-2.jpg" alt="Single Origin Ethiopia"></td>
+            </tr>
+            <!-- Sample Product 3 -->
+            <tr>
+                <td><a href="product3.html">Decaf Espresso</a></td>
+                <td>Full-bodied decaffeinated espresso for a guilt-free indulgence.</td>
+                <td><img class="product-image" src="https://i.pinimg.com/originals/38/7e/01/387e014532af428a1d297754044dcaaf.jpg" alt="Decaf Espresso"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Standard Footer -->
     <footer>
         <p>&copy; 2023 Digital Espresso</p>
     </footer>
 </body>
+
 </html>
